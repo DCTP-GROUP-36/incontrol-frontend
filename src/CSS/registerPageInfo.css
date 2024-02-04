@@ -1,0 +1,14 @@
+
+.register-page-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: right;
+    background-color: #E5E8FF;
+}
+
+.register-page-image {
+    width: 577px;
+    height: 433px;
+}

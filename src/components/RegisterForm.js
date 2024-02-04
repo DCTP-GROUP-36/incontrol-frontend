@@ -6,12 +6,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../middlewares/axios";
+import "../CSS/registerForm.css"
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = "/register";
 
-const Register = () => {
+const RegisterForm = () => {
   const userRef = useRef();
   const errRef = useRef();
 
@@ -96,7 +97,7 @@ const Register = () => {
           </p>
         </section>
       ) : (
-        <section>
+        <section className="register-section-container">
           <p
             ref={errRef}
             className={errMsg ? "errmsg" : "offscreen"}
@@ -242,4 +243,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterForm;

@@ -1,10 +1,11 @@
-import RegisterComponent from './components/RegisterComponent.js';
+import RegisterPage from './components/RegisterPage.js';
+import "./CSS/App.css"
 
 function App() {
 
   return (
     <main className="App">
-      <RegisterComponent />
+      <RegisterPage />
     </main>
   );
 }
