@@ -10,9 +10,6 @@ import RegisterComponent from './components/registerComponent.js';
 
 const App = () => {
   return (
-    <main className="App">
-      <RegisterPage />
-    </main>
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
