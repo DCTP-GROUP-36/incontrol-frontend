@@ -105,7 +105,7 @@ const RegisterForm = () => {
           >
             {errMsg}
           </p>
-          <div className="register-form-container">
+          <div className="register-form-container  form-logo-div">
             <img src="../../incontrol-logo.png" alt="incontrol-logo"></img>
           </div>
           <div className="register-form-container">
@@ -226,17 +226,25 @@ const RegisterForm = () => {
             <button
               disabled={!validName || !validPwd || !validMatch ? true : false}
             >
-              Sign Up
+              Register
             </button>
           </form>
-          <p>
+          <p className="already-registered">
             Already registered?
             <br />
             <span className="line">
               {/*put router link here*/}
-              <a href="#">Sign In</a>
+              <a href="#">Sign in</a>
             </span>
           </p>
+          <div>
+            <p className="already-registered">------ Or Continue With-------</p>
+            <div>
+            <a href="#" class="fa fa-facebook"><FontAwesomeIcon icon={fa-facebook} /></a>
+            <a href="#" class="fa fa-twitter"></a>
+            </div>
+
+          </div>
         </section>
       )}
     </>

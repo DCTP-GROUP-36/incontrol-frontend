@@ -9,13 +9,18 @@ section {
      */
     background-color:#FFFFFF;
     padding: 1rem;
+    border-radius: 10px;
+    width: 420px;
+    min-height: 400px;
+    border-radius: 31.78px
+
 }
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    flex-grow: 1;
+/*    flex-grow: 1; */
     padding-bottom: 1rem;
 }
 
@@ -39,7 +44,9 @@ button {
 }
 
 button {
-  padding: 0.5rem;
+  padding: 0.1rem;
+  background-color: #0117FD;
+  border-radius: 15px;
 }
 
 .instructions {
@@ -89,4 +96,13 @@ button {
 
 .register-form-container {
     text-align: center;
+}
+
+.form-logo-div img {
+    margin-top: 0%;
+}
+
+.already-registered {
+    text-align: center;
+    margin-top: 0px;
 }
