@@ -21,7 +21,7 @@ import axios from "../middlewares/axios";
 import "../CSS/registerForm.css"
 
 //const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
-const USER_REGEX = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+const USER_EMAIL_REGEX = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = "/register";
 
@@ -49,7 +49,7 @@ const RegisterForm = () => {
   }, []);
 
   useEffect(() => {
-    setValidName(USER_REGEX.test(user));
+    setValidName(USER_EMAIL_REGEX.test(user));
   }, [user]);
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // if button enabled with JS hack
-    const v1 = USER_REGEX.test(user);
+    const v1 = USER_EMAIL_REGEX.test(user);
     const v2 = PWD_REGEX.test(pwd);
     if (!v1 || !v2) {
       setErrMsg("Invalid Entry");
@@ -156,7 +156,7 @@ const RegisterForm = () => {
               }
             >
               <FontAwesomeIcon icon={faInfoCircle} />
-              4 to 24 characters.
+              Enter valid email.
               <br />
               Must begin with a letter.
               <br />
