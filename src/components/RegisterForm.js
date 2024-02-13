@@ -4,11 +4,24 @@ import {
   faTimes,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  FaDribbbleSquare,
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaInstagram,
+  FaTwitterSquare,
+  FaWhatsappSquare,
+  FaPhoneSquareAlt,
+  FaEnvelope,
+  FaLinkedin,
+} from 'react-icons/fa';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../middlewares/axios";
 import "../CSS/registerForm.css"
 
-const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
+//const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
+const USER_REGEX = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = "/register";
 
@@ -240,7 +253,7 @@ const RegisterForm = () => {
           <div>
             <p className="already-registered">------ Or Continue With-------</p>
             <div>
-            <a href="#" class="fa fa-facebook"><FontAwesomeIcon icon={fa-facebook} /></a>
+            <a href="#" class="fa fa-facebook"><FontAwesomeIcon icon={FaFacebookSquare} /></a>
             <a href="#" class="fa fa-twitter"></a>
             </div>
 
