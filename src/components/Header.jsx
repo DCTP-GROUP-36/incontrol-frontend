@@ -28,11 +28,11 @@ const Header = () => {
           </button>
         </div>
         <div className="hidden lg:flex space-x-4">
-        <Link to='/' className='p-4'>Home</Link>
+              <Link to='/' className='p-4'>Home</Link>
               <Link to='/why-us' className='p-4'>Why InControl</Link>
               <Link to='/our-service' className='p-4'>Our Service</Link>
               <Link to='/faqs' className='p-4'>FAQs</Link>
-              <Link to='/register-component' className='p-2 text-white'>
+              <Link to='/register' className='p-2 text-white'>
                 <button className='p-2' style={{ backgroundColor: '#0117fd', borderRadius: '10px' }}>Create Account</button>
               </Link>
         </div>

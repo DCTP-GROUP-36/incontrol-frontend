@@ -1,4 +1,7 @@
-import { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import LoginPage from './Login.js';
+import { Link } from 'react-router-dom';
+import "../CSS/registerForm.css"
 import {
   faCheck,
   faTimes,
@@ -14,11 +17,11 @@ import {
   FaPhoneSquareAlt,
   FaEnvelope,
   FaLinkedin,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../middlewares/axios";
-import "../CSS/registerForm.css"
+import "../CSS/registerForm.css";
 
 //const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const USER_EMAIL_REGEX = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
@@ -243,20 +246,25 @@ const RegisterForm = () => {
             </button>
           </form>
           <p className="already-registered">
-            Already registered?
-            <br />
-            <span className="line">
+            Already registered? Login
+            <span>
               {/*put router link here*/}
-              <a href="#">Sign in</a>
+              <Link to="/login">Login</Link>
             </span>
           </p>
           <div>
             <p className="already-registered">------ Or Continue With-------</p>
             <div>
-            <a href="#" class="fa fa-facebook"><FontAwesomeIcon icon={FaFacebookSquare} /></a>
-            <a href="#" class="fa fa-twitter"></a>
+              <a href="#" >
+                <FaFacebookSquare size={30} />
+              </a>
+              <a href="#" >
+                <FaInstagram size={30} />
+              </a>
+              <a href="#" >
+                <FaTwitterSquare size={30} />
+              </a>
             </div>
-
           </div>
         </section>
       )}
