@@ -5,7 +5,7 @@ import {Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import AboutUs from './Pages/AboutUs';
 import WhyUs from './Pages/WhyUs';
-import LoginPage from './components/Login.js';
+import LoginPage from './components/LoginPage.js';
 //import RegisterComponent from './components/registerComponent.js';
 
 

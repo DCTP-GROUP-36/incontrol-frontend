@@ -1,10 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import {Link } from 'react-router-dom';
-import {
-  faCheck,
-  faTimes,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import {faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import {
   FaDribbbleSquare,
   FaFacebookSquare,
@@ -130,14 +126,10 @@ const Login = () => {
             Login
             </button>
           </form>
-          <p className="already-registered">
-            Not registered?
-            <br />
-            <span className="line">
-              {/*put router link here*/}
-              <Link to="/register-component"></Link>
-            </span>
-          </p>
+          <div className="already-registered">
+            Not registered? <Link to="/register">Register Here</Link>
+            
+          </div>
           <div>
             <p className="already-registered">------ Or Continue With-------</p>
             <div>
