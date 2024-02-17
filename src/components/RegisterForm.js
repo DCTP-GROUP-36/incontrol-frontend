@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import LoginPage from './LoginPage.js';
 import { Link } from 'react-router-dom';
 import "../CSS/registerForm.css"
 import {
@@ -246,15 +245,15 @@ const RegisterForm = () => {
             </button>
           </form>
           <p className="already-registered">
-            Already registered? Login
+            Already registered?   
             <span>
               {/*put router link here*/}
               <Link to="/login">Login</Link>
             </span>
           </p>
           <div>
-            <p className="already-registered">------ Or Continue With-------</p>
-            <div>
+            <div  className="already-registered"><p>------ Or Continue With-------</p></div>
+            <div className="social-icons-container">
               <a href="#" >
                 <FaFacebookSquare size={30} />
               </a>

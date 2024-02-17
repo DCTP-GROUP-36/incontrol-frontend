@@ -35,6 +35,9 @@ const Header = () => {
               <Link to='/register' className='p-2 text-white'>
                 <button className='p-2' style={{ backgroundColor: '#0117fd', borderRadius: '10px' }}>Create Account</button>
               </Link>
+              <Link to='/login' className='p-2 text-white'>
+                <button className='p-2' style={{ backgroundColor: '#0117fd', borderRadius: '10px' }}>Login</button>
+              </Link>
         </div>
       </div>
       {isOpen && (

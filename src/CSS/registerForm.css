@@ -22,9 +22,7 @@ form {
     padding-bottom: 1rem;
 }
 
-a, a:visited {
-    color: #fff;
-}
+
 
 input[type="text"],
 input[type="password"],
@@ -86,10 +84,16 @@ button {
     margin-bottom: 0.5rem;
 }
 
-.line {
-    display: inline-block;
-}
 
 .register-form-container {
     text-align: center;
+}
+
+.social-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+    padding-left: 30%;
+    padding-right: 30%;
 }

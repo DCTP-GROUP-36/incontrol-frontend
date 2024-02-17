@@ -1,6 +1,6 @@
-import { useRef, useState, useEffect } from "react";
-import {Link } from 'react-router-dom';
-import {faInfoCircle} from "@fortawesome/free-solid-svg-icons";
+import React, { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import {
   FaDribbbleSquare,
   FaFacebookSquare,
@@ -16,7 +16,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../middlewares/axios";
 import "../CSS/registerForm.css";
-import Register from "./RegisterPage";
 
 const LOGIN_URL = "/login";
 
@@ -39,7 +38,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       const response = await axios.post(
         LOGIN_URL,
@@ -72,79 +71,73 @@ const Login = () => {
   return (
     <>
       (
-        <section className="register-section-container">
-          <p
-            ref={errRef}
-            className={errMsg ? "errmsg" : "offscreen"}
-            aria-live="assertive"
-          >
+      <section className="register-section-container">
+        <p
+          ref={errRef}
+          className={errMsg ? "errmsg" : "offscreen"}
+          aria-live="assertive"
+        >
+          {errMsg}
+        </p>
+        <div className="register-form-container  form-logo-div">
+          <img src="../../incontrol-logo.png" alt="incontrol-logo"></img>
+        </div>
+        <div className="register-form-container">
+          <h5>Login</h5>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="email"
+            ref={userRef}
+            autoComplete="off"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            required
+            aria-describedby="uidnote"
+            onFocus={() => setEmailFocus(true)}
+            onBlur={() => setEmailFocus(false)}
+            placeholder="Email"
+          />
+
+          <input
+            type="password"
+            id="password"
+            onChange={(e) => setPwd(e.target.value)}
+            value={pwd}
+            required
+            aria-describedby="pwdnote"
+            onFocus={() => setPwdFocus(true)}
+            onBlur={() => setPwdFocus(false)}
+            placeholder="password"
+          />
+          <p id="pwdnote" className={errMsg ? "errmsg" : "offscreen"}>
+            <FontAwesomeIcon icon={faInfoCircle} />
             {errMsg}
           </p>
-          <div className="register-form-container  form-logo-div">
-            <img src="../../incontrol-logo.png" alt="incontrol-logo"></img>
-          </div>
-          <div className="register-form-container">
-            <h5>Login</h5>
-          </div>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              id="email"
-              ref={userRef}
-              autoComplete="off"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              required
-              aria-describedby="uidnote"
-              onFocus={() => setEmailFocus(true)}
-              onBlur={() => setEmailFocus(false)}
-              placeholder="Email"
-            />
 
-            <input
-              type="password"
-              id="password"
-              onChange={(e) => setPwd(e.target.value)}
-              value={pwd}
-              required
-              aria-describedby="pwdnote"
-              onFocus={() => setPwdFocus(true)}
-              onBlur={() => setPwdFocus(false)}
-              placeholder="password"
-            />
-            <p
-              id="pwdnote"
-              className={errMsg ? "errmsg" : "offscreen"}
-            >
-              <FontAwesomeIcon icon={faInfoCircle} />
-              {errMsg}
-            </p>
-
-            <button
-              disabled={false}
-            >
-            Login
-            </button>
-          </form>
+          <button disabled={false}>Login</button>
+        </form>
+        <div className="already-registered">
+          Not registered? <Link to="/register">Register Here</Link>
+        </div>
+        <div>
           <div className="already-registered">
-            Not registered? <Link to="/register">Register Here</Link>
-            
+            <p>---- Or Continue With----</p>
           </div>
-          <div>
-            <p className="already-registered">------ Or Continue With-------</p>
-            <div>
-              <a href="www.facebook.com" >
-                <FaFacebookSquare size={30} />
-              </a>
-              <a href="www.instagram.com" >
-                <FaInstagram size={30} />
-              </a>
-              <a href="www.twitter.com" >
-                <FaTwitterSquare size={30} />
-              </a>
-            </div>
+          <div className="social-icons-container">
+            <a href="www.facebook.com">
+              <FaFacebookSquare size={30} />
+            </a>
+            <a href="www.instagram.com">
+              <FaInstagram size={30} />
+            </a>
+            <a href="www.twitter.com">
+              <FaTwitterSquare size={30} />
+            </a>
           </div>
-        </section>
+        </div>
+      </section>
       )
     </>
   );
