@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import LoginPage from './Login.js';
+import LoginPage from './LoginPage.js';
 import { Link } from 'react-router-dom';
 import "../CSS/registerForm.css"
 import {
