@@ -6,21 +6,12 @@ import {
   faTimes,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  FaDribbbleSquare,
-  FaFacebookSquare,
-  FaGithubSquare,
-  FaInstagram,
-  FaTwitterSquare,
-  FaWhatsappSquare,
-  FaPhoneSquareAlt,
-  FaEnvelope,
-  FaLinkedin,
-} from "react-icons/fa";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../middlewares/axios";
 import "../CSS/registerForm.css";
+import FormHeader from "./FormHeader"
+import FormFooter from "./FormFooter";
 
 //const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const USER_EMAIL_REGEX = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
@@ -120,12 +111,7 @@ const RegisterForm = () => {
           >
             {errMsg}
           </p>
-          <div className="register-form-container  form-logo-div">
-            <img src="../../incontrol-logo.png" alt="incontrol-logo"></img>
-          </div>
-          <div className="register-form-container">
-            <h5>Sign Up</h5>
-          </div>
+          <FormHeader formType="Register" />
           <form onSubmit={handleSubmit}>
             <label htmlFor="username">
               <FontAwesomeIcon
@@ -253,17 +239,7 @@ const RegisterForm = () => {
           </p>
           <div>
             <div  className="already-registered"><p>------ Or Continue With-------</p></div>
-            <div className="social-icons-container">
-              <a href="#" >
-                <FaFacebookSquare size={30} />
-              </a>
-              <a href="#" >
-                <FaInstagram size={30} />
-              </a>
-              <a href="#" >
-                <FaTwitterSquare size={30} />
-              </a>
-            </div>
+            <FormFooter />
           </div>
         </section>
       )}

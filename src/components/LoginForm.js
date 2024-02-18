@@ -1,15 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import {
-  FaFacebookSquare,
-  FaInstagram,
-  FaTwitterSquare
-} from "react-icons/fa";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../middlewares/axios";
 import "../CSS/registerForm.css";
+import FormHeader from "./FormHeader";
+import FormFooter from "./FormFooter";
 
 const LOGIN_URL = "/login";
 
@@ -73,12 +69,7 @@ const Login = () => {
         >
           {errMsg}
         </p>
-        <div className="register-form-container  form-logo-div">
-          <img src="../../incontrol-logo.png" alt="incontrol-logo"></img>
-        </div>
-        <div className="register-form-container">
-          <h5>Login</h5>
-        </div>
+        <FormHeader formType="Login" />
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -119,17 +110,7 @@ const Login = () => {
           <div className="already-registered">
             <p>---- Or Continue With----</p>
           </div>
-          <div className="social-icons-container">
-            <a href="www.facebook.com">
-              <FaFacebookSquare size={30} />
-            </a>
-            <a href="www.instagram.com">
-              <FaInstagram size={30} />
-            </a>
-            <a href="www.twitter.com">
-              <FaTwitterSquare size={30} />
-            </a>
-          </div>
+          <FormFooter />
         </div>
       </section>
       )
