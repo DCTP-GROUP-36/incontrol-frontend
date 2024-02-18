@@ -2,15 +2,9 @@ import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import {
-  FaDribbbleSquare,
   FaFacebookSquare,
-  FaGithubSquare,
   FaInstagram,
-  FaTwitterSquare,
-  FaWhatsappSquare,
-  FaPhoneSquareAlt,
-  FaEnvelope,
-  FaLinkedin,
+  FaTwitterSquare
 } from "react-icons/fa";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
