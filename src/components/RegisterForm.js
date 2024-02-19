@@ -6,7 +6,6 @@ import {
   faTimes,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../middlewares/axios";
 import "../CSS/registerForm.css";
@@ -238,9 +237,9 @@ const RegisterForm = () => {
             </span>
           </p>
           <div>
-            <div  className="already-registered"><p>------ Or Continue With-------</p></div>
-            <FormFooter />
+            <div  className="already-registered"><p>---- Or Continue With----</p></div>
           </div>
+          <FormFooter />
         </section>
       )}
     </>

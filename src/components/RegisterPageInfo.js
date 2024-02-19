@@ -10,7 +10,7 @@ function RegisterPageInfo () {
                 <p>A sure solution to social media slavery</p>
             </div>
             <div>
-                <img src={require("../register-page-image.png")} className="register-page-image" alt="register-page"></img>
+                <img src={require("../assets/register-page-image.png")} className="register-page-image" alt="register-page"></img>
             </div>
         </div>
     )

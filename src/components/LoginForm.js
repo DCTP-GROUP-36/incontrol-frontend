@@ -104,7 +104,7 @@ const Login = () => {
           <button disabled={false}>Login</button>
         </form>
         <div className="already-registered">
-          Not registered? <Link to="/register">Register Here</Link>
+          Not registered?     <Link to="/register">Register Here</Link>
         </div>
         <div>
           <div className="already-registered">
